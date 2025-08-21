@@ -1,0 +1,212 @@
+:root {
+  --purple-light: #DDD2EF;
+  --purple-dark: #6F3CC3;
+  --purple-base: #9359F3;
+  --green-light: #BFE3D0;
+  --green-base: #479C6E;
+  --green-dark: #2D6C4A;
+  --gray-400: #D1CBD7;
+  --gray-330: #E0DCE4;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #fff;
+  min-height: 100vh;
+}
+
+header {
+  background: var(--gray-330);
+  padding: 32px 0 24px 0;
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  height: 40px;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 32px 16px 0 16px;
+}
+
+form#formCadastroTarefa {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+form#formCadastroTarefa input[type="text"] {
+  flex: 1;
+  padding: 16px;
+  border: 2px solid var(--purple-base);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  outline: none;
+  background: #fff;
+  color: #333;
+}
+
+form#formCadastroTarefa input[type="text"]::placeholder {
+  color: #808080;
+}
+
+form#formCadastroTarefa button {
+  background: var(--purple-base);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: 48px;
+}
+
+form#formCadastroTarefa button:hover {
+  background: var(--purple-dark);
+}
+
+form#formCadastroTarefa button img {
+  width: 18px;
+  height: 18px;
+}
+
+main > section:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+main > section:nth-of-type(2) div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+main > section:nth-of-type(2) p {
+  font-size: 1rem;
+  color: var(--purple-dark);
+  font-weight: 600;
+}
+
+#numTarefas {
+  background: var(--purple-light);
+  color: var(--purple-base);
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 2px 10px;
+  font-size: 0.95rem;
+  margin-left: 4px;
+}
+
+#numConcluidas {
+  background: var(--green-light);
+  color: var(--green-base);
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 2px 10px;
+  font-size: 0.95rem;
+  margin-left: 4px;
+}
+
+#inputBusca {
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  padding: 10px 16px;
+  font-size: 1rem;
+  color: #333;
+  width: 180px;
+  outline: none;
+  border: 2px solid var(--gray-400);
+}
+
+#inputBusca::placeholder {
+  color: #b0b0b0;
+}
+
+#semTarefas {
+  background: transparent;
+  border-top: 1px solid var(--gray-400);
+  text-align: center;
+  padding: 48px 0 0 0;
+  margin-top: 24px;
+}
+
+#semTarefas img {
+  width: 48px;
+  opacity: 0.6;
+  margin-bottom: 16px;
+}
+
+#semTarefas h3 {
+  color: var(--purple-dark);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+#semTarefas p {
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+#listaTarefas {
+  margin-top: 24px;
+}
+
+#listaTarefas > div {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+#listaTarefas button[title="Concluir Tarefa"] {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--purple-base);
+  background: transparent;
+  cursor: pointer;
+  margin-right: 16px;
+}
+
+#listaTarefas p {
+  flex: 1;
+  color: #333;
+  font-size: 1rem;
+  margin: 0 16px 0 0;
+}
+
+#listaTarefas button[title="Excluir Tarefa"] {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#listaTarefas button[title="Excluir Tarefa"] img {
+  width: 20px;
+  height: 20px;
+}
